@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">İlacın Kapında</string>
+
+    <string name="giris_text">Giriş Yap</string>
+    <string name="giris_email">E-mail *</string>
+    <string name="giris_sifre">Şifre *</string>
+
+    <string name="internet_uyari_baslik">İnternet erişimi yok</string>
+    <string name="internet_uyari_mesaj">İnternete bağlanmanız gerekiyor.</string>
+    <string name="internet_uyari_btn_ayarlar">Ayarlar</string>
+    <string name="internet_uyari_btn_cikis">Çıkış</string>
+
+    <string name="cikis_uyari_baslik">Uygulamadan Çık</string>
+    <string name="cikis_uyari_mesaj">Çıkmak istediğinizden emin misiniz?</string>
+    <string name="cikis_uyari_btn_evet">Evet</string>
+    <string name="cikis_uyari_btn_hayir">Hayır</string>
+
+    <string name="giris_uyari_baslik">HATA</string>
+    <string name="giris_sifre_uyari_mesaj">Email veya Şifre Yanlış!</string>
+    <string name="giris_validasyon_uyari_mesaj">Lütfen Email ve Şifreyi Doldurunuz!</string>
+    <string name="giris_uyari_btn_tamam">Tamam</string>
+
+    <string name="kategoriler_baslik">Kategoriler</string>
+
+</resources>

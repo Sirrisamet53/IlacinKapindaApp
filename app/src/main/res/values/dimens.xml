@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="splash_logo_size">130dp</dimen>
+    <dimen name="card_view_padding">16dp</dimen>
+
+
+</resources>
