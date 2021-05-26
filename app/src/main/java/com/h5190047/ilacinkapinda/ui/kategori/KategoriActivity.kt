@@ -1,7 +1,10 @@
-package com.h5190047.ilacinkapinda
+package com.h5190047.ilacinkapinda.ui.kategori
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.h5190047.ilacinkapinda.R
+import com.h5190047.ilacinkapinda.util.AlertUtil
+import com.h5190047.ilacinkapinda.util.UYARI_TIPLERI
 
 class KategoriActivity : AppCompatActivity() {
 

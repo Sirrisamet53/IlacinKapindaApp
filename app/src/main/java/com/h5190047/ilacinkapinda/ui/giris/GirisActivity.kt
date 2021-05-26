@@ -1,10 +1,14 @@
-package com.h5190047.ilacinkapinda
+package com.h5190047.ilacinkapinda.ui.giris
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.h5190047.ilacinkapinda.ui.kategori.KategoriActivity
+import com.h5190047.ilacinkapinda.R
 import com.h5190047.ilacinkapinda.databinding.ActivityGirisBinding
+import com.h5190047.ilacinkapinda.util.AlertUtil
+import com.h5190047.ilacinkapinda.util.UYARI_TIPLERI
+import com.h5190047.ilacinkapinda.util.ValidasyonUtil
 
 class GirisActivity : AppCompatActivity() {
 

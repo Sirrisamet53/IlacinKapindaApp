@@ -1,4 +1,4 @@
-package com.h5190047.ilacinkapinda
+package com.h5190047.ilacinkapinda.util
 
 object Constants {
     const val MILI_SANIYE_SPLSSCRN: Long = 3000

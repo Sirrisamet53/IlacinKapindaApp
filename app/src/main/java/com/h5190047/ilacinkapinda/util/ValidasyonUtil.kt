@@ -1,4 +1,4 @@
-package com.h5190047.ilacinkapinda
+package com.h5190047.ilacinkapinda.util
 
 import android.util.Patterns
 

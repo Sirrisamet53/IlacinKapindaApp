@@ -1,9 +1,10 @@
-package com.h5190047.ilacinkapinda
+package com.h5190047.ilacinkapinda.util
 
 import android.app.Activity
 import android.content.Intent
 import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
+import com.h5190047.ilacinkapinda.R
 
 object AlertUtil {
     fun alertGoster(ekran: Activity, baslik: String?, mesaj: String?, uyariTuru: UYARI_TIPLERI) {

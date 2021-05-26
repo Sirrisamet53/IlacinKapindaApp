@@ -13,9 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/Theme.IlacinKapinda">
-        <activity android:name=".KategoriActivity"></activity>
-        <activity android:name=".GirisActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.kategori.KategoriActivity"></activity>
+        <activity android:name=".ui.giris.GirisActivity" />
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
