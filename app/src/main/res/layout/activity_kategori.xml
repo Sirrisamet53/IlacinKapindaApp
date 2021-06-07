@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtKullaniciAdi2"
-        tools:listitem="@layout/cardview_kategoriler" />
+        tools:listitem="@layout/card_view_kategoriler" />
 
     <ImageView
         android:id="@+id/imageView4"
