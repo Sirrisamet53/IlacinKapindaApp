@@ -12,8 +12,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IlacinKapinda">
-        <activity android:name=".ui.kategori.KategoriActivity"></activity>
+        android:theme="@style/Theme.IlacinKapinda"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.detay.DetayActivity"></activity>
+        <activity android:name=".ui.urun.UrunActivity" />
+        <activity android:name=".ui.kategori.KategoriActivity" />
         <activity android:name=".ui.giris.GirisActivity" />
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>

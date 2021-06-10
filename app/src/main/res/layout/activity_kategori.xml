@@ -7,14 +7,14 @@
     tools:context=".ui.kategori.KategoriActivity">
 
     <TextView
-        android:id="@+id/txtKullaniciAdi2"
+        android:id="@+id/txtUrunBaslik"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/txturunbaslikkategori_marginstart"
+        android:layout_marginTop="@dimen/txturunbaslikkategori_margintop"
         android:text="@string/kategoriler_baslik"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="@dimen/txturunbaslikkategori_textsize"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/searchView"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Samet Keles"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtkullaniciadikategori_textsize"
         app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -33,26 +33,27 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/searchviewkategori_widht"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/searchviewkategori_margintop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvKategoriler"
         android:layout_width="match_parent"
         android:layout_height="@dimen/match_constraint"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/rcvKategoriler_margintop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtKullaniciAdi2"
+        app:layout_constraintTop_toBottomOf="@+id/txtUrunBaslik"
         tools:listitem="@layout/card_view_kategoriler" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/imageviev4_width"
+        android:layout_height="@dimen/imageviev4_height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,8 +61,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/imageView5_width"
+        android:layout_height="@dimen/imageView5_height"
         app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintStart_toEndOf="@+id/searchView"
         app:layout_constraintTop_toTopOf="@+id/searchView"

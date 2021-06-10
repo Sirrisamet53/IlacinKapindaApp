@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     fun timeriBaslat() {
-        countDownTimer = object : CountDownTimer(Constants.MILI_SANIYE_SPLSSCRN, Constants.MILI_SANIYE_SPLSSCRN){
+        countDownTimer = object : CountDownTimer(Constants.MILI_SANIYE_SPLSSCRN, Constants.INTERVAL_SPLSSCRN){
             override fun onTick(millisUntilFinished: Long) {
 
             }

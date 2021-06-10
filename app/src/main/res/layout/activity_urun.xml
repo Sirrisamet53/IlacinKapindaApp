@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.kategori.KategoriActivity">
+
+    <Button
+        android:id="@+id/btnIzgaraYap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/urun_btn_izgara"
+        app:layout_constraintBottom_toBottomOf="@+id/btnListeYap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnListeYap" />
+
+    <TextView
+        android:id="@+id/txtKategoriBaslik"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="Ürünler"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtkategoribaslikurun_textsize"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvUrunler"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSirala"
+        tools:listitem="@layout/card_view_kategoriler" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/imageviev4_width"
+        android:layout_height="@dimen/imageviev4_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ilacinkapindalogo" />
+
+    <Button
+        android:id="@+id/btnSirala"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="@string/urun_btn_sirala"
+        app:layout_constraintEnd_toStartOf="@+id/btnListeYap"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtKategoriBaslik"
+        tools:text="Sırala" />
+
+    <Button
+        android:id="@+id/btnListeYap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/urun_btn_liste"
+        app:layout_constraintEnd_toStartOf="@+id/btnIzgaraYap"
+        app:layout_constraintTop_toTopOf="@+id/btnSirala"
+        tools:text="Liste" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

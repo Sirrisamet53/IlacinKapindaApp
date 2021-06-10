@@ -21,5 +21,9 @@
     <string name="giris_uyari_btn_tamam">Tamam</string>
 
     <string name="kategoriler_baslik">Kategoriler</string>
+    <string name="progres_dialog_yazi">Yükleniyor Lütfen Bekleyiniz...</string>
+    <string name="urun_btn_sirala">Sırala</string>
+    <string name="urun_btn_liste">Liste</string>
+    <string name="urun_btn_izgara">Izgara</string>
 
 </resources>

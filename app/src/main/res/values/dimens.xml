@@ -4,6 +4,68 @@
     <dimen name="match_constraint">0dp</dimen>
     <dimen name="splash_logo_size">130dp</dimen>
     <dimen name="card_view_padding">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="imageviev4_width">150dp</dimen>
+    <dimen name="imageviev4_height">70dp</dimen>
+    <dimen name="ilacfoto_height">450dp</dimen>
+    <dimen name="ilacfoto_margin">12dp</dimen>
+
+    <dimen name="txturunbaslik_textsize">28sp</dimen>
+
+    <dimen name="imageviev2_width">300dp</dimen>
+    <dimen name="imageviev2_margintop">32dp</dimen>
+
+    <dimen name="textviev_marginstart">25dp</dimen>
+    <dimen name="textviev_margintop">30dp</dimen>
+
+    <dimen name="textviev2_margintop">24dp</dimen>
+    <dimen name="textviev2_textsize">16dp</dimen>
+
+    <dimen name="edtemail_margintop">4dp</dimen>
+    <dimen name="edtemail_marginend">24dp</dimen>
+    <dimen name="edtemail_padding">15dp</dimen>
 
 
+    <dimen name="textviev3_margintop">24dp</dimen>
+    <dimen name="textviev3_textsize">16sp</dimen>
+
+    <dimen name="btngirisyap_width">100dp</dimen>
+    <dimen name="btngirisyap_margintop">24dp</dimen>
+
+    <dimen name="txturunbaslikkategori_marginstart">30dp</dimen>
+    <dimen name="txturunbaslikkategori_margintop">30dp</dimen>
+    <dimen name="txturunbaslikkategori_textsize">28sp</dimen>
+
+    <dimen name="txtkullaniciadikategori_textsize">20sp</dimen>
+
+    <dimen name="searchviewkategori_widht">32sp</dimen>
+    <dimen name="searchviewkategori_margintop">32dp</dimen>
+
+    <dimen name="rcvKategoriler_margintop">15dp</dimen>
+
+    <dimen name="imageView4_width">150dp</dimen>
+    <dimen name="imageView4_height">70dp</dimen>
+
+    <dimen name="imageView5_width">40dp</dimen>
+    <dimen name="imageView5_height">40dp</dimen>
+
+    <dimen name="txtkategoribaslikurun_textsize">28sp</dimen>
+
+    <dimen name="imgkategori_width">150dp</dimen>
+    <dimen name="imgkategori_height">150dp</dimen>
+
+    <dimen name="txtkategoriadi_margintop">10dp</dimen>
+    <dimen name="txtkategoriadi_marginbutton">10dp</dimen>
+
+    <dimen name="imgurun_width">150dp</dimen>
+    <dimen name="imgurun_height">150dp</dimen>
+
+    <dimen name="txturunadi_margintop">10dp</dimen>
+    <dimen name="txturunadi_marginbutton">10dp</dimen>
+
+    <dimen name="edittext_margintop">4dp</dimen>
+    <dimen name="edittext_marginend">24dp</dimen>
+    <dimen name="edittext_padding">15dp</dimen>
 </resources>
