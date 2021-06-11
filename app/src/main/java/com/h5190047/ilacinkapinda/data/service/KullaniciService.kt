@@ -1,6 +1,5 @@
-package com.h5190047.ilacinkapinda.data.datasource
+package com.h5190047.ilacinkapinda.data.service
 
-import com.h5190047.ilacinkapinda.data.model.KategorilerUrunlerResponseItem
 import com.h5190047.ilacinkapinda.data.model.KullanicilarResponse
 import com.h5190047.ilacinkapinda.util.Constants
 import okhttp3.OkHttpClient
@@ -9,11 +8,13 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-
+//Github içerisine atılmış olan kullanıcı jsonunun alındığı interface türü kotlin sınıfıdır
 interface KullaniciService {
     @GET("kullanicilar.json")
+    //Kullanıcıların getirildiği kısıtlanmış fonksiyondur.
     suspend fun kullanicilariGetir(): Response<KullanicilarResponse>
 
+    //statik nesne metodudur. içerisinde kullanıcı servisi oluşturulur.
     companion object {
         fun build(): KullaniciService {
 

@@ -1,5 +1,5 @@
 package com.h5190047.ilacinkapinda.data.model
-
+//Kategori verilerinin tutlduğu json'ı modelleyen classtır
 class KategorilerUrunlerResponse : ArrayList<KategorilerUrunlerResponseItem>()
 
 data class KategorilerUrunlerResponseItem(

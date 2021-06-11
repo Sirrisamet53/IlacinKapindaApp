@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         timeriBaslat()
     }
-
+//splash ekranın ekranda ne kadar kalacağını belirleyen fonksiyodnur
     fun timeriBaslat() {
         countDownTimer = object : CountDownTimer(Constants.MILI_SANIYE_SPLSSCRN, Constants.INTERVAL_SPLSSCRN){
             override fun onTick(millisUntilFinished: Long) {
@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
             }
         }.start()
     }
-
+//splash ekranından sonra gelicek olan ekranı belirleyen fonksiyondur
     fun ekraniDegistir() {
 
         if (NetworkUtil.internetVarMi(this@SplashActivity)){

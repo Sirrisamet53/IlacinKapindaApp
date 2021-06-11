@@ -6,7 +6,9 @@ import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import com.h5190047.ilacinkapinda.R
 
+//Kullanıcıya verilecek olan uyarıların gösterileceği kotlin nesne sınıfıdır.
 object AlertUtil {
+
     fun alertGoster(ekran: Activity, baslik: String?, mesaj: String?, uyariTuru: UYARI_TIPLERI) {
         val builder = AlertDialog.Builder(ekran)
         builder.setTitle(baslik)

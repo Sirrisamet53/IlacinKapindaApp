@@ -7,7 +7,7 @@ import com.h5190047.ilacinkapinda.data.model.KategorilerUrunlerResponseItem
 import com.h5190047.ilacinkapinda.databinding.CardViewKategorilerBinding
 import com.h5190047.ilacinkapinda.util.GlideUtil
 import com.h5190047.ilacinkapinda.util.OnItemClickListener
-
+//Kategori sayfası içerisinde bulunan verilerin activity ile birleştirildiği kotlin sınıfıdır.
 class KategoriAdaptor(
     var kategoriList: List<KategorilerUrunlerResponseItem>,
     var onItemClickListener: OnItemClickListener
@@ -38,7 +38,7 @@ class KategoriAdaptor(
             }
         }
     }
-
+//Liste içerisinde bulunan verilerin dizi boyutu kadar döndürüldüğü metoddur
     override fun getItemCount(): Int {
         return kategoriList.size
     }

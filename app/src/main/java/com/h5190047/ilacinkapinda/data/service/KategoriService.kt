@@ -1,4 +1,4 @@
-package com.h5190047.ilacinkapinda.data.datasource
+package com.h5190047.ilacinkapinda.data.service
 
 import com.h5190047.ilacinkapinda.data.model.KategorilerUrunlerResponseItem
 import com.h5190047.ilacinkapinda.util.Constants
@@ -8,7 +8,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-
+//Github içerisine atılmış olan kullanıcı jsonunun alındığı interface türü kotlin sınıfıdır
 interface KategoriService {
     @GET("kategoriler_urunler.json")
     suspend fun kategorileriGetir(): Response<List<KategorilerUrunlerResponseItem>>

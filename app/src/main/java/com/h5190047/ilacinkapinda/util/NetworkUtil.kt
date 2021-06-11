@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 
+//Bağlantı varlığını kontrol eden kotlin nesne sınıfıdır
 object NetworkUtil {
     fun internetVarMi(context: Context): Boolean {
         val connectivityManager: ConnectivityManager =

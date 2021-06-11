@@ -12,24 +12,25 @@ import com.h5190047.ilacinkapinda.data.repository.KullaniciRepository
 import com.h5190047.ilacinkapinda.util.ResourceStatus
 import kotlinx.coroutines.launch
 
+//Kullanıcının jsondan gelen verileriyle birlikte oluşturulan viewmodeldir
 class KullaniciViewModel: ViewModel() {
     private val kullaniciRepository: KullaniciRepository = KullaniciRepository()
 
     init {
         kullanicilariGetir()
     }
-
+    //resource'tan çekilden değişkenlerin tanımlandığı yerdir
     var loading: MutableLiveData<Boolean>? = MutableLiveData()
     var tumKullanicilarLiveData = MutableLiveData<KullanicilarResponse>()
     var error = MutableLiveData<Throwable>()
 
-
+    //kullanıcıların getirildiği fonksiyondur
     fun kullanicilariGetir() = viewModelScope.launch {
 
         kullaniciRepository.kullanicilariGetir()
 
             .asLiveData(viewModelScope.coroutineContext).observeForever {
-
+        //Resource'tan gelen değişkenlerin durum belirtmek için kullanıldığı bölümdür.
                 when (it.status) {
                     ResourceStatus.LOADING -> {
                         loading?.postValue(true)

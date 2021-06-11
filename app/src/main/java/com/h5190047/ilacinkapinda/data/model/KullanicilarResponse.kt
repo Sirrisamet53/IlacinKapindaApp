@@ -1,5 +1,5 @@
 package com.h5190047.ilacinkapinda.data.model
-
+//Kullanıcıları verilerinin tutlduğu json'ı modelleyen classtır
 data class KullanicilarResponse(
     val Kullanicilar: List<Kullanicilar>
 )

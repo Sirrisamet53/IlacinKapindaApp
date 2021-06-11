@@ -12,6 +12,8 @@ import com.h5190047.ilacinkapinda.databinding.ActivityKategoriBinding
 import com.h5190047.ilacinkapinda.ui.urun.UrunActivity
 import com.h5190047.ilacinkapinda.util.*
 
+//Kategorilerin görüntüleneceği kotlin sınıfıdır.
+
 class KategoriActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKategoriBinding
@@ -20,6 +22,7 @@ class KategoriActivity : AppCompatActivity() {
 
     var kategoriAdaptor: KategoriAdaptor? = null
 
+    //Geri butonuna tıklandığında kullanıcıya uygulamadan çıkmak istediğine dair uyarı verilir
     override fun onBackPressed() {
         AlertUtil.alertGoster(
             this,
@@ -28,19 +31,22 @@ class KategoriActivity : AppCompatActivity() {
             UYARI_TIPLERI.CIKIS_UYARI
         )
     }
-
+//bu sayfa açıldığında ilk çalışacak olan metoddur
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         init()
     }
 
     private fun init() {
+        //içerisinde binding, arama yapma, görüntülenecek model, progres dialog çağırılmıştır
         binding = ActivityKategoriBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initSearchView()
+        ProgressUtil.dialogGoster(this, getString(R.string.progres_dialog_yazi))
         initViewModel()
     }
 
+    //Kullanıcının kategori araması yapıldığı yerdir
     private fun initSearchView() {
         binding.apply {
             searchView.apply {
@@ -58,25 +64,31 @@ class KategoriActivity : AppCompatActivity() {
         }
     }
 
+    //kategorilerin listelenip modellendiği metoddur
     private fun initViewModel() {
         kategoriViewModel.apply {
             tumKategorilerLiveData.observe(this@KategoriActivity, androidx.lifecycle.Observer {
                 Log.e("SAMTO", "observe: " + it.toString())
                 kategoriListe = it
                 initRecycleView(kategoriListe!!)
+                ProgressUtil.dialogGizle()
             })
 
             error?.observe(this@KategoriActivity, androidx.lifecycle.Observer {
                 Log.e("SAMTO", "error:")
+                ProgressUtil.dialogGizle()
+
             })
 
             loading?.observe(this@KategoriActivity, androidx.lifecycle.Observer {
                 Log.e("SAMTO", "loading:")
+                ProgressUtil.dialogGizle()
 
             })
         }
     }
 
+    //kategorilerin filtrelendiği metoddur
     fun kategorileriFiltrele(arananKategori: String?) {
         arananKategori?.let {
             kategoriListe?.let {
@@ -86,6 +98,7 @@ class KategoriActivity : AppCompatActivity() {
         }
     }
 
+    //Kategori response'u içerisinde listelenmiş olan verilerin döndürüleceği recycle metodudur
     private fun initRecycleView(kategoriler: List<KategorilerUrunlerResponseItem>) {
         binding.apply {
             kategoriAdaptor = KategoriAdaptor(kategoriler, object : OnItemClickListener {

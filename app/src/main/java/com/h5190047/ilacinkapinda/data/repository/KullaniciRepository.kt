@@ -15,6 +15,7 @@ class KullaniciRepository {
     init {
         kullaniciDataSource = RemoteKullaniciDataSource()
     }
+    //kullanıcıların getirileceği fonksiyondur.Flow coroutines in resource kaynağından kategori responsuna erişiliyor.
 
     fun kullanicilariGetir(): Flow<Resource<KullanicilarResponse>> {
         return kullaniciDataSource!!.kullanicilariGetir()

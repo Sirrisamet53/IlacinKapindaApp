@@ -22,12 +22,14 @@ class KategoriViewModel : ViewModel() {
     var tumKategorilerLiveData = MutableLiveData<List<KategorilerUrunlerResponseItem>>()
     var error = MutableLiveData<Throwable>()
 
+    //kategorilerin getirildiği fonksiyondur
 
     fun kategorileriGetir() = viewModelScope.launch {
 
         kategoriRepository.kategorileriGetir()
 
             .asLiveData(viewModelScope.coroutineContext).observeForever {
+                //Resource'tan gelen değişkenlerin durum belirtmek için kullanıldığı bölümdür.
 
                 when (it.status) {
                     ResourceStatus.LOADING -> {

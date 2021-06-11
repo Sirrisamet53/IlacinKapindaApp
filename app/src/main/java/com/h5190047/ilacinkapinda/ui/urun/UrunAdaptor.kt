@@ -9,6 +9,7 @@ import com.h5190047.ilacinkapinda.databinding.CardViewKategorilerBinding
 import com.h5190047.ilacinkapinda.databinding.CardViewUrunlerBinding
 import com.h5190047.ilacinkapinda.util.GlideUtil
 import com.h5190047.ilacinkapinda.util.OnItemClickListener
+//Ürün sayfası içerisinde bulunan verilerin activity ile birleştirildiği kotlin sınıfıdır.
 
 class UrunAdaptor(
     var urunList: List<Product>,
@@ -17,6 +18,7 @@ class UrunAdaptor(
 
     inner class UrunlerViewHolder(val binding: CardViewUrunlerBinding) :
         RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UrunlerViewHolder {
         val binding =
@@ -40,6 +42,7 @@ class UrunAdaptor(
             }
         }
     }
+//Liste içerisinde bulunan verilerin dizi boyutu kadar döndürüldüğü metoddur
 
     override fun getItemCount(): Int {
         return urunList.size
