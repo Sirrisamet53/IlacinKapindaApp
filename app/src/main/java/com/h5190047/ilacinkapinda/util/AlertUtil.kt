@@ -5,6 +5,8 @@ import android.content.Intent
 import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import com.h5190047.ilacinkapinda.R
+import com.h5190047.ilacinkapinda.data.model.Product
+import com.h5190047.ilacinkapinda.ui.urun.UrunAdaptor
 
 //Kullanıcıya verilecek olan uyarıların gösterileceği kotlin nesne sınıfıdır.
 object AlertUtil {
@@ -39,7 +41,22 @@ object AlertUtil {
         builder.show()
     }
 
-    fun siralamaAlertiGoster(){
-        TODO("Sıralama butonuna basınca burası çalışacak")
+    fun siralamaAlertiGoster(ekran: Activity, baslik: String?, liste: ArrayList<Product>, adaptor: UrunAdaptor){
+        val builder = AlertDialog.Builder(ekran)
+        builder.setTitle(baslik)
+        builder.setCancelable(false)
+        val siralamaSecenekleri = arrayOf("İsme göre artan sıralama", "İsme göre azalan sıralama")
+        builder.setItems(siralamaSecenekleri){ diyalog, pozisyon ->
+            when (pozisyon) {
+                0 -> {
+                    liste.sortBy { it.marka }
+                }
+                1 -> {
+                    liste.sortByDescending { it.marka }
+                }
+            }
+            adaptor.notifyDataSetChanged()
+        }
+        builder.show()
     }
 }

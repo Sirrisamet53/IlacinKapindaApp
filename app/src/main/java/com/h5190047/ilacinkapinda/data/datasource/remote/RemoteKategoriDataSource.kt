@@ -1,7 +1,8 @@
-package com.h5190047.ilacinkapinda.data.datasource
+package com.h5190047.ilacinkapinda.data.datasource.remote
 
+import com.h5190047.ilacinkapinda.data.datasource.KategoriDataSource
+import com.h5190047.ilacinkapinda.data.datasource.KategoriService
 import com.h5190047.ilacinkapinda.data.model.KategorilerUrunlerResponseItem
-import com.h5190047.ilacinkapinda.data.service.KategoriService
 import com.h5190047.ilacinkapinda.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

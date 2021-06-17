@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import com.h5190047.ilacinkapinda.ui.kategori.KategoriActivity
 import com.h5190047.ilacinkapinda.R
 import com.h5190047.ilacinkapinda.data.model.Kullanicilar
@@ -11,7 +12,6 @@ import com.h5190047.ilacinkapinda.data.model.KullanicilarResponse
 import com.h5190047.ilacinkapinda.databinding.ActivityGirisBinding
 import com.h5190047.ilacinkapinda.util.AlertUtil
 import com.h5190047.ilacinkapinda.util.UYARI_TIPLERI
-import com.h5190047.ilacinkapinda.util.ValidasyonUtil
 
 
 //kullanıcının uygulamaya giriş yapacağı kotlin sınıfıdır.
@@ -39,10 +39,11 @@ class GirisActivity : AppCompatActivity() {
         //binding ile uygulanacak olan formu kontrol et metodu çağırılmıştır.
         binding.apply {
             btnGirisYap.setOnClickListener {
-                formuKontrolEt()
+                girisFormunuKontrolEt()
             }
         }
     }
+
     //Kullanıcı modelden çekilen verilerin görüntülendiği fonksiyondur
     private fun initViewModel() {
         kullaniciViewModel.apply {
@@ -63,17 +64,16 @@ class GirisActivity : AppCompatActivity() {
     }
 
     //formun kontrol etildiği fonksiyondur
-    fun formuKontrolEt() {
+    fun girisFormunuKontrolEt() {
         //kullanıcının girmiş olduğu mail adresinin doğru veya boş olup olmadığını kontrol eder
         binding.apply {
-            if (ValidasyonUtil.emailGecerliMi(edtEmail.text.toString()) && ValidasyonUtil.alanDoluMu(
-                    edtSifre.text.toString()
-                )
+            if (Patterns.EMAIL_ADDRESS.matcher(edtEmail.text).matches() &&
+                !edtEmail.text.isNullOrBlank() && !edtSifre.text.isNullOrBlank()
             ) {
                 //eğer doğru ise girisiKontrolEt fonksiyonu çağırılır
                 girisiKontrolEt(edtEmail.text.toString())
             } else
-                //eğer değil ise kullanıcıya uyarı verilir
+            //eğer değil ise kullanıcıya uyarı verilir
                 AlertUtil.alertGoster(
                     this@GirisActivity,
                     getString(R.string.giris_uyari_baslik),
@@ -86,8 +86,8 @@ class GirisActivity : AppCompatActivity() {
     private fun girisiKontrolEt(email: String) {
         //anlık giren kullanıcıyı kontrol eden fonksiyondur
         kullanicilar?.run {
-            var filtrelenmisKullanicilar =this.Kullanicilar.filter { it.Email.contains(email) }
-            if (!filtrelenmisKullanicilar.isNullOrEmpty()){
+            var filtrelenmisKullanicilar = this.Kullanicilar.filter { it.Email.contains(email) }
+            if (!filtrelenmisKullanicilar.isNullOrEmpty()) {
                 girisYapanKullanici = filtrelenmisKullanicilar.first()
             } else
                 girisYapanKullanici = null
@@ -98,7 +98,7 @@ class GirisActivity : AppCompatActivity() {
                 startActivity(Intent(this@GirisActivity, KategoriActivity::class.java))
                 finish()
             } else
-                //şifresi doğru değil ise uyarı verir
+            //şifresi doğru değil ise uyarı verir
                 AlertUtil.alertGoster(
                     this@GirisActivity,
                     getString(R.string.giris_uyari_baslik),

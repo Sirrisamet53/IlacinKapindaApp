@@ -3,6 +3,7 @@ package com.h5190047.ilacinkapinda.ui.urun
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,17 +47,23 @@ class UrunActivity : AppCompatActivity() {
             btnListeYap.setOnClickListener {
                 listelemeyiDegistir()
             }
+            btnSirala.setOnClickListener {
+                val urunler: ArrayList<Product> = secilenKategori!!.Products as ArrayList<Product>
+                AlertUtil.siralamaAlertiGoster(this@UrunActivity, "Sıralama Seçeneği Seçiniz", urunler, urunAdaptor!!)
+            }
         }
     }
+
     //Liste veya Grid düzeninde olacağını belirleyen metoddur
-    fun listelemeyiDegistir(){
+    fun listelemeyiDegistir() {
         binding.apply {
-            if(listeTuru == RCV_LAYOUT_TIPLERI.LISTE_LAYOUT){
-                rcvUrunler.layoutManager = GridLayoutManager(applicationContext, Constants.GRID_KOLON_SAYISI)
+            if (listeTuru == RCV_LAYOUT_TIPLERI.LISTE_LAYOUT) {
+                rcvUrunler.layoutManager =
+                    GridLayoutManager(applicationContext, Constants.GRID_KOLON_SAYISI)
                 listeTuru = RCV_LAYOUT_TIPLERI.GRID_LAYOUT
                 btnIzgaraYap.isEnabled = false
                 btnListeYap.isEnabled = true
-            }else {
+            } else {
                 rcvUrunler.layoutManager = LinearLayoutManager(applicationContext)
                 listeTuru = RCV_LAYOUT_TIPLERI.LISTE_LAYOUT
                 btnIzgaraYap.isEnabled = true
@@ -89,6 +96,7 @@ class UrunActivity : AppCompatActivity() {
             rcvUrunler.adapter = urunAdaptor
             rcvUrunler.layoutManager =
                 GridLayoutManager(applicationContext, Constants.GRID_KOLON_SAYISI)
+            btnIzgaraYap.isEnabled = false
         }
     }
 

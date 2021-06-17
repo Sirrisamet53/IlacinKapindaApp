@@ -1,7 +1,8 @@
-package com.h5190047.ilacinkapinda.data.datasource
+package com.h5190047.ilacinkapinda.data.datasource.remote
 
+import com.h5190047.ilacinkapinda.data.datasource.KategoriService
+import com.h5190047.ilacinkapinda.data.datasource.KullaniciDataSource
 import com.h5190047.ilacinkapinda.data.model.KullanicilarResponse
-import com.h5190047.ilacinkapinda.data.service.KullaniciService
 import com.h5190047.ilacinkapinda.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,7 +13,7 @@ class RemoteKullaniciDataSource: KullaniciDataSource {
         try {
             emit(Resource.Loading())
 
-            val response = KullaniciService.build().kullanicilariGetir()
+            val response = KategoriService.build().kullanicilariGetir()
             //eğer response başarılı gelir ise resource başarılı döner
             if (response.isSuccessful) {
                 response.body()?.let {

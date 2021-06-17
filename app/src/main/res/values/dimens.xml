@@ -40,7 +40,7 @@
 
     <dimen name="txtkullaniciadikategori_textsize">20sp</dimen>
 
-    <dimen name="searchviewkategori_widht">180dp</dimen>
+    <dimen name="searchviewkategori_widht">200dp</dimen>
     <dimen name="searchviewkategori_margintop">32dp</dimen>
 
     <dimen name="rcvKategoriler_margintop">15dp</dimen>

@@ -10,14 +10,13 @@
         android:id="@+id/txtUrunBaslik"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/txturunbaslikkategori_marginstart"
-        android:layout_marginTop="@dimen/txturunbaslikkategori_margintop"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:text="@string/kategoriler_baslik"
         android:textColor="@color/black"
         android:textSize="@dimen/txturunbaslikkategori_textsize"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/txtKullaniciAdi"
@@ -26,19 +25,18 @@
         android:text="Samet Keles"
         android:textColor="@color/black"
         android:textSize="@dimen/txtkullaniciadikategori_textsize"
-        app:layout_constraintBottom_toBottomOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/searchView"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/searchView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="@dimen/searchviewkategori_widht"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/searchviewkategori_margintop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvKategoriler"
@@ -64,9 +62,9 @@
         android:id="@+id/imageView5"
         android:layout_width="@dimen/imageView5_width"
         android:layout_height="@dimen/imageView5_height"
-        app:layout_constraintBottom_toBottomOf="@+id/searchView"
-        app:layout_constraintStart_toEndOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="@+id/searchView"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="@+id/txtUrunBaslik"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/user_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
