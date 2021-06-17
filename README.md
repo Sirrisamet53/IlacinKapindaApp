@@ -1,4 +1,4 @@
-![cover](https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/banner.jpg)
+![cover](https://user-images.githubusercontent.com/61050690/122398161-48434b80-cf82-11eb-952d-4d74e7418fad.png)
 
 
 # IlacinKapindaApp
