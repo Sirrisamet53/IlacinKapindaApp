@@ -6,7 +6,7 @@
 
 Bu uygulama <a href="http://ilacinkapinda.com/" target="_blank"> İlacın Kapında Web Sayfası </a> içindeki kategoriler, ürünler kullanılarak yapılmış bir uygulamadır.
 
-Bu uygulamada  Retrofit, Glide gibi teknolojiler kullanılarak tasarlanmıştır.
+Bu uygulama Corutines, Retrofit, Glide gibi teknolojiler kullanılarak tasarlanmıştır.
 
 
 # Ekran görüntüleri
