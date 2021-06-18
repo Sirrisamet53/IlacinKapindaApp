@@ -68,4 +68,6 @@
     <dimen name="edittext_margintop">4dp</dimen>
     <dimen name="edittext_marginend">24dp</dimen>
     <dimen name="edittext_padding">15dp</dimen>
+
+    <dimen name="imageView_margintop">36dp</dimen>
 </resources>

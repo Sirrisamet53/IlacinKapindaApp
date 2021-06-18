@@ -6,15 +6,15 @@ import com.h5190047.ilacinkapinda.data.model.KategorilerUrunlerResponseItem
 import com.h5190047.ilacinkapinda.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-//Modellenen kategorilerin kaynak dosyasından çekilen bilgiler ile birleştirildiği classtır
 
+//Uzak sunucudan gelen kategori veri kaynağı sınıfıdır.
 class RemoteKategoriDataSource: KategoriDataSource {
-    //kategorilerin responstan çekildiği metoddur.
 
+
+    //Kategorilerin uzak sunucudan asekron çekildiği metoddur.Eğer retrofit başarılı bir respons getirirse ise resource başarılı mesajı verilir
     override fun kategorileriGetir(): Flow<Resource<List<KategorilerUrunlerResponseItem>>> = flow {
         try {
             emit(Resource.Loading())
-            //eğer response başarılı gelir ise resource başarılı mesajı verilir
 
             val response = KategoriService.build().kategorileriGetir()
 

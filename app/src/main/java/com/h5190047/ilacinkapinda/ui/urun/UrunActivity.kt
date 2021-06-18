@@ -13,7 +13,7 @@ import com.h5190047.ilacinkapinda.data.model.Product
 import com.h5190047.ilacinkapinda.databinding.ActivityUrunBinding
 import com.h5190047.ilacinkapinda.ui.detay.DetayActivity
 import com.h5190047.ilacinkapinda.util.*
-
+//Seçilen kategoriye göre ürünün listelendiği ekrandır.
 class UrunActivity : AppCompatActivity() {
 
     var secilenKategori: KategorilerUrunlerResponseItem? = null

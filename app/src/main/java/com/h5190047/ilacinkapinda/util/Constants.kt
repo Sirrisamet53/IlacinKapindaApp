@@ -1,5 +1,5 @@
 package com.h5190047.ilacinkapinda.util
-
+//Projede sabit değerlerin tutulduğu kotlin sınıfıdır
 object Constants {
     const val MILI_SANIYE_SPLSSCRN: Long = 3000
     const val INTERVAL_SPLSSCRN: Long = 1000

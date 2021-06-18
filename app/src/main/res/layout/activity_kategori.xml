@@ -62,7 +62,7 @@
         android:id="@+id/imageView5"
         android:layout_width="@dimen/imageView5_width"
         android:layout_height="@dimen/imageView5_height"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="@dimen/imageView_margintop"
         app:layout_constraintStart_toStartOf="@+id/txtUrunBaslik"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/user_icon" />

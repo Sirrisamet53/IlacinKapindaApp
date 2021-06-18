@@ -1,5 +1,5 @@
 package com.h5190047.ilacinkapinda.util
-
+//uygulamanın kaynak dosyasıdır
 sealed class Resource<T>(
     val data: T?,
     val throwable: Throwable?,
