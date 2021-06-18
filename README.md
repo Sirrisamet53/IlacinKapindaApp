@@ -2,7 +2,7 @@
 
 
 # IlacinKapindaApp
-![ic_launcher](https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ic_launcher.png)
+![ic_launcher](https://raw.githubusercontent.com/Sirrisamet53/IlacinKapindaApp/master/Photos/ic_launcher.png)
 
 Bu uygulama <a href="http://ilacinkapinda.com/" target="_blank"> İlacın Kapında Web Sayfası </a> içindeki kategoriler, ürünler kullanılarak yapılmış bir uygulamadır.
 
