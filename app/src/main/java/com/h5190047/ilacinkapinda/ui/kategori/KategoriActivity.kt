@@ -14,7 +14,7 @@ import com.h5190047.ilacinkapinda.util.*
 
 //Kategorilerin görüntüleneceği kotlin sınıfıdır.
 
-class aKategoriActivity : AppCompatActivity() {
+class KategoriActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKategoriBinding
     var kategoriViewModel: KategoriViewModel = KategoriViewModel()
