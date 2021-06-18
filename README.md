@@ -6,25 +6,21 @@
 
 Bu uygulama <a href="http://ilacinkapinda.com/" target="_blank"> İlacın Kapında Web Sayfası </a> içindeki kategoriler, ürünler kullanılarak yapılmış bir uygulamadır.
 
-Bu uygulama Corutines, Retrofit, Glide gibi teknolojiler kullanılarak tasarlanmıştır.
+Bu uygulama Coroutines, Retrofit, Glide gibi teknolojiler kullanılarak tasarlanmıştır.
 
 
 # Ekran görüntüleri
 <p>
-<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ss1.png" />
-<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ss2.png" />
-<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ss3.png" />
-<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ss4.png" />
-<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/ss5.png" />
+<img height= "400"  src="https://raw.githubusercontent.com/Sirrisamet53/IlacinKapindaApp/master/Photos/app_preview.gif" />
 </p>
 
 ### Projenin Mimari Yapısı
-![cleansimplearch](https://raw.githubusercontent.com/Sirrisamet53/Android_Kopek_App/master/Photos/mimari%20paket.PNG)
+![cleansimplearch](https://raw.githubusercontent.com/Sirrisamet53/IlacinKapindaApp/master/Photos/mimari_paket.PNG)
 
 
 
 ### Projede kullanılan Teknolojiler
-* [RxJava](https://github.com/ReactiveX/RxJava)
+* [Coroutines](https://developer.android.com/kotlin/coroutines)
 * [Retrofit2](https://github.com/square/retrofit)
 * [Okhttp](https://github.com/square/okhttp)
 * [Glide](https://github.com/bumptech/glide)
